@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Login and Sign Up</title>
+    <link rel="stylesheet" href="body.css"> 
+    <link rel="stylesheet" href="container.css"> 
+    <link rel="stylesheet" href="overlay.css"> 
+    <link rel="stylesheet" href="form.css"> 
+
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form class="form" action="#">
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="form-container sign-up-container">
+            <form class="form" action="#">
+                <h1>Create Account</h1>
+               
+
+                
+                 <input type="text" placeholder="Name" required />
+              
+                <input type="email" placeholder="Email" required />
+
+             
+                <input type="password" placeholder="Password" required />
+
+               
+
+        
+                <input type="date" placeholder="Birthday" required />
+                
+                <div class="input-group">
+                    <select id="countryCode" required>
+                        <option value=""><span  class="span">Country</span></option>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+91">+91 (India)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+33">+33 (France)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+39">+39 (Italy)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+7">+7 (Russia)</option>
+                        <option value="+55">+55 (Brazil)</option>
+                        <option value="+34">+34 (Spain)</option>
+                        <option value="+82">+82 (South Korea)</option>
+                        <option value="+31">+31 (Netherlands)</option>
+                        <option value="+46">+46 (Sweden)</option>
+                        <option value="+41">+41 (Switzerland)</option>
+                        <option value="+32">+32 (Belgium)</option>
+                        <option value="+52">+52 (Mexico)</option>
+                        <option value="+27">+27 (South Africa)</option>
+                        <option value="+65">+65 (Singapore)</option>
+                        <option value="+20">+20 (Egypt)</option>
+                        <option value="+971">+971 (UAE)</option>
+                        <option value="+92">+92 (Pakistan)</option>
+                        <option value="+66">+66 (Thailand)</option>
+                        <option value="+90">+90 (Turkey)</option>
+                        <option value="+880">+880 (Bangladesh)</option>
+                        <option value="+98">+98 (Iran)</option>
+                        <option value="+63">+63 (Philippines)</option>
+                        <option value="+94">+94 (Sri Lanka)</option>
+                        <option value="+64">+64 (New Zealand)</option>
+                        <option value="+972">+972 (Israel)</option>
+                        <option value="+30">+30 (Greece)</option>
+                        <option value="+353">+353 (Ireland)</option>
+                        <option value="+40">+40 (Romania)</option>
+                        <option value="+57">+57 (Colombia)</option>
+                        <option value="+56">+56 (Chile)</option>
+                        <option value="+234">+234 (Nigeria)</option>
+                        <option value="+212">+212 (Morocco)</option>
+                        <option value="+93">+93 (Afghanistan)</option>
+                        
+                    </select>
+                    <input type="tel" placeholder="Phone Number" required />
+                </div>
+
+                <select id="sex" required>
+                    <option value=""><span class="span">Sex</span></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+              
+
+               
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello!</h1>
+                    <p>Don't have an account? Enter your personal details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+    </script>
+</body>
+</html>
